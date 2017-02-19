@@ -156,7 +156,11 @@ a:hover {
 }
 
 .about-list2 span {
+	writing-mode: tb-rl;
+	-webkit-writing-mode: vertical-rl;
 	writing-mode: vertical-rl;
+	*writing-mode: tb-rl;
+	/*writing-mode: vertical-rl;*/
 	letter-spacing: 5px;
 }
 
