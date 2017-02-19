@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>无标题文档</title>
+		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+		<style>
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			body {
+				background: #cccccc;
+			}
+			
+			ul,
+			ol {
+				list-style-type: none;
+				display: none;
+			}
+			
+			.menu div {
+				width: 220px;
+			}
+			
+			.menu p {
+				width: 220px;
+				height: 35px;
+				line-height: 35px;
+				background: #99CC33;
+				border-bottom: 1px solid #333333;
+				text-align: center;
+				cursor: pointer;
+			}
+			
+			.menu ul {
+				width: 220px;
+			}
+			
+			ul {
+				height: auto;
+				margin: 1px auto;
+				background: #99CCCC;
+				text-align: center;
+			}
+			
+			ul li {
+				width: 220px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+			}
+			
+			ul li:hover {
+				background: #ccff33;
+			}
+			
+			ul li a {
+				text-decoration: none;
+			}
+		</style>
+		<script>
+			$(function() {
+				$(".menu p").hover(function() {
+					$(".menuItem").hide();
+					$(this).next("ul").show();
+				}, function() {})
+			});
+		</script>
+	</head>
+
+	<body>
+		<div class="menu">
+			<div>
+				<p>网站管理</p>
+				<ul class="menuItem">
+					<li>
+						<a href="siteInfo.php" target="main">网站基本信息</a>
+					</li>
+					<li>
+						<a href="updateSite.php" target="main">网站配置</a>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<p>权限管理</p>
+				<ul class="menuItem">
+					<li>
+						<a href="userGroupList.php" target="main">用户组列表</a>
+					</li>
+					<li>
+						<a href="usersPower.php" target="main">用户权限列表</a>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<p>用户管理</p>
+				<ul class="menuItem">
+					<li>
+						<a href="userList.php" target="main">用户列表</a>
+					</li>
+					<li>
+						<a href="addUser.php" target="main">添加用户</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+
+</html>
